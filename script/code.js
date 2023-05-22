@@ -34,15 +34,7 @@ addEventListener('click', ()=>{
 btnClear.addEventListener('click', clear)
 
 function calculate() {
-    if (output) {
-        let result = eval(output.value);
+    let outputArr = eval(output.value);
+    output.value = outputArr.toFixed(2);
 
-        if (result === Infinity || result === -Infinity) {
-            output.value = "ERROR";
-        }else{
-            output.value = result;
-        }
-    }if (error) {
-        output.value = "Error"
-    }
 }
